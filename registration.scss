@@ -1,0 +1,223 @@
+$color-blue-bg: #001d43;
+$color-blue-title: #3c5674;
+$color-blue-rec: #193d6b;
+$color-white: #ffffff;
+$color-white-smoke: #e9edf0;
+$color-red: #b71f35;
+$color-bluewt: #2c9595;
+$color-green: #5ea661;
+$color-yellow: #f5a623;
+
+@mixin title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  max-width: 315px;
+  line-height: 65px;
+}
+@mixin content {
+  margin-top: 10px;
+  font-size: 3rem;
+  line-height: 42px;
+  font-style: italic;
+  font-weight: 300;
+  max-width: 514px;
+  color: $color-blue-title;
+}
+@mixin item {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+  height: 360px;
+}
+
+.container {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  background-color: $color-blue-bg;
+  overflow: hidden;
+}
+
+// start style header
+.header {
+  &__time {
+    &--hour {
+      position: absolute;
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 55px;
+      color: $color-white;
+      opacity: 0.5;
+      font-style: normal;
+      left: 51px;
+      top: 23px;
+    }
+    &--day {
+      position: absolute;
+      left: 799px;
+      top: 23px;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 55px;
+      font-style: normal;
+      color: $color-white;
+      z-index: 1;
+    }
+  }
+  &__logo {
+    &--img {
+      position: absolute;
+      width: 864.3px;
+      height: 998px;
+      left: 251px;
+      top: -160px;
+    }
+  }
+}
+// end header
+
+// start registration
+
+.registration {
+  cursor: pointer;
+  &__item {
+    position: absolute;
+    @include item();
+    top: 702px;
+    left: 0;
+    background-color: $color-white-smoke;
+    box-shadow: 0px -20px 50px rgba(0, 0, 0, 0.25);
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 2;
+    top: 107px;
+    left: 109px;
+    width: 120px;
+    height: 121.5px;
+    color: $color-blue-title;
+  }
+
+  &__personal {
+    z-index: 2;
+    position: absolute;
+    top: 44px;
+    left: 311px;
+
+    &--title {
+      @include title();
+      color: $color-blue-title;
+      width: 315px;
+      height: 137px;
+
+      span {
+        font-size: 7.2rem;
+      }
+    }
+    &--content {
+      @include content();
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 78.37px;
+    top: 121px;
+    z-index: 2;
+    width: 93.63px;
+    height: 93.63px;
+  }
+}
+// End registration
+
+// add color item red & bluewt
+
+.item {
+  &--red {
+    background-color: $color-red;
+    z-index: 2;
+    top: 1039px;
+    left: 0;
+    &--title {
+      color: $color-white;
+    }
+    &--content {
+      color: $color-white;
+    }
+  }
+  &--bluewt {
+    border-radius: 30px;
+    background-color: $color-bluewt;
+    z-index: 3;
+    top: 1372px;
+    left: 0;
+    &--title {
+      color: $color-white;
+    }
+    &--content {
+      color: $color-white;
+    }
+  }
+}
+// end add color
+
+// start style warning
+.warning {
+  &__icon {
+    position: absolute;
+    bottom: 65px;
+    left: 69px;
+    width: 80px;
+    height: 80px;
+  }
+  &__content {
+    position: absolute;
+    top: 1771px;
+    right: 106px;
+    width: 775px;
+    color: $color-white;
+    font-size: 3rem;
+    line-height: 42px;
+    font-weight: normal;
+  }
+}
+
+// end style waring
+
+// Start rectangle
+.rectangle {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  &__red {
+    width: 214px;
+    height: 100%;
+    background-color: $color-red;
+  }
+  &__blue {
+    width: 214px;
+    height: 100%;
+    background-color: $color-blue-rec;
+  }
+  &__bluewt {
+    width: 214px;
+    height: 100%;
+    background-color: $color-bluewt;
+  }
+  &__green {
+    width: 214px;
+    height: 100%;
+    background-color: $color-green;
+  }
+  &__yellow {
+    width: 214px;
+    height: 100%;
+    background-color: $color-yellow;
+  }
+}
+// End rectangle
