@@ -65,7 +65,7 @@
   top: 44px;
   left: 311px;
 }
-.registration .item .personal--title {
+.registration .item .personal__title {
   font-size: 3.5rem;
   font-weight: 800;
   max-width: 315px;
@@ -74,10 +74,10 @@
   width: 315px;
   height: 137px;
 }
-.registration .item .personal--title span {
+.registration .item .personal__title span {
   font-size: 7.2rem;
 }
-.registration .item .personal--content {
+.registration .item .personal__content {
   margin-top: 10px;
   font-size: 3rem;
   line-height: 42px;

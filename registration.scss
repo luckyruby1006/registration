@@ -100,7 +100,7 @@ $color-yellow: #f5a623;
       top: 44px;
       left: 311px;
 
-      &--title {
+      &__title {
         @include title();
         color: $color-blue-title;
         width: 315px;
@@ -110,7 +110,7 @@ $color-yellow: #f5a623;
           font-size: 7.2rem;
         }
       }
-      &--content {
+      &__content {
         @include content();
       }
     }
