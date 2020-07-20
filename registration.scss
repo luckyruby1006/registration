@@ -38,10 +38,9 @@ $color-yellow: #f5a623;
   overflow: hidden;
 }
 
-// start style header
 .header {
-  &__time {
-    &--hour {
+  .time {
+    .hour {
       position: absolute;
       font-size: 3.5rem;
       font-weight: 600;
@@ -52,7 +51,7 @@ $color-yellow: #f5a623;
       left: 51px;
       top: 23px;
     }
-    &--day {
+    .day {
       position: absolute;
       left: 799px;
       top: 23px;
@@ -65,7 +64,7 @@ $color-yellow: #f5a623;
     }
   }
   &__logo {
-    &--img {
+    img {
       position: absolute;
       width: 864.3px;
       height: 998px;
@@ -74,104 +73,87 @@ $color-yellow: #f5a623;
     }
   }
 }
-// end header
-
-// start registration
 
 .registration {
   cursor: pointer;
-  &__item {
+  .item {
     position: absolute;
     @include item();
     top: 702px;
     left: 0;
     background-color: $color-white-smoke;
     box-shadow: 0px -20px 50px rgba(0, 0, 0, 0.25);
-  }
 
-  &__icon {
-    position: absolute;
-    z-index: 2;
-    top: 107px;
-    left: 109px;
-    width: 120px;
-    height: 121.5px;
-    color: $color-blue-title;
-  }
-
-  &__personal {
-    z-index: 2;
-    position: absolute;
-    top: 44px;
-    left: 311px;
-
-    &--title {
-      @include title();
+    .icon {
+      position: absolute;
+      z-index: 2;
+      top: 107px;
+      left: 109px;
+      width: 120px;
+      height: 121.5px;
       color: $color-blue-title;
-      width: 315px;
-      height: 137px;
+    }
 
-      span {
-        font-size: 7.2rem;
+    .personal {
+      z-index: 2;
+      position: absolute;
+      top: 44px;
+      left: 311px;
+
+      &--title {
+        @include title();
+        color: $color-blue-title;
+        width: 315px;
+        height: 137px;
+
+        span {
+          font-size: 7.2rem;
+        }
+      }
+      &--content {
+        @include content();
       }
     }
-    &--content {
-      @include content();
+
+    .button {
+      position: absolute;
+      right: 78.37px;
+      top: 121px;
+      z-index: 2;
+      width: 93.63px;
+      height: 93.63px;
     }
   }
-
-  &__button {
+  .red {
     position: absolute;
-    right: 78.37px;
-    top: 121px;
-    z-index: 2;
-    width: 93.63px;
-    height: 93.63px;
-  }
-}
-// End registration
-
-// add color item red & bluewt
-
-.item {
-  &--red {
     background-color: $color-red;
     z-index: 2;
     top: 1039px;
     left: 0;
-    &--title {
-      color: $color-white;
-    }
-    &--content {
-      color: $color-white;
-    }
   }
-  &--bluewt {
+  .bluewt {
+    position: absolute;
     border-radius: 30px;
     background-color: $color-bluewt;
     z-index: 3;
     top: 1372px;
     left: 0;
-    &--title {
-      color: $color-white;
-    }
-    &--content {
-      color: $color-white;
-    }
   }
 }
-// end add color
 
-// start style warning
+.color--white {
+  color: $color-white !important;
+}
+
 .warning {
-  &__icon {
+  .icon {
     position: absolute;
     bottom: 65px;
     left: 69px;
     width: 80px;
     height: 80px;
   }
-  &__content {
+  .content {
     position: absolute;
     top: 1771px;
     right: 106px;
@@ -183,9 +165,6 @@ $color-yellow: #f5a623;
   }
 }
 
-// end style waring
-
-// Start rectangle
 .rectangle {
   position: absolute;
   display: flex;
@@ -194,30 +173,29 @@ $color-yellow: #f5a623;
   left: 0;
   width: 100%;
   height: 14px;
-  &__red {
+  .red {
     width: 214px;
     height: 100%;
     background-color: $color-red;
   }
-  &__blue {
+  .blue {
     width: 214px;
     height: 100%;
     background-color: $color-blue-rec;
   }
-  &__bluewt {
+  .bluewt {
     width: 214px;
     height: 100%;
     background-color: $color-bluewt;
   }
-  &__green {
+  .green {
     width: 214px;
     height: 100%;
     background-color: $color-green;
   }
-  &__yellow {
+  .yellow {
     width: 214px;
     height: 100%;
     background-color: $color-yellow;
   }
 }
-// End rectangle
